@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f4f5f7;
+}
+
+/* --- Auth pages --- */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.auth-form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.auth-form button[type="submit"] {
+  padding: 0.6rem;
+  background: #2c5f8a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #2c5f8a;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.error-text {
+  color: #c0392b;
+  font-size: 0.85rem;
+}
+
+/* --- Board page --- */
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.board-header button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #2c5f8a;
+  color: white;
+}
+
+.logout-button {
+  background: #888 !important;
+}
+
+.welcome-text {
+  margin-right: 1rem;
+  color: #555;
+}
+
+.board-columns {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+}
+
+.column {
+  background: #ebecf0;
+  border-radius: 6px;
+  padding: 0.75rem;
+  width: 300px;
+  min-height: 400px;
+}
+
+.column-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.task-count {
+  color: #888;
+  font-weight: normal;
+}
+
+.task-list {
+  min-height: 60px;
+}
+
+.task-list.dragging-over {
+  background: #dfe3ea;
+  border-radius: 4px;
+}
+
+.task-card {
+  background: white;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  cursor: grab;
+}
+
+.task-card.dragging {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.task-card-header h4 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.task-description {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0.4rem 0 0 0;
+}
+
+.task-due-date {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.loading-text {
+  text-align: center;
+  margin-top: 3rem;
+  color: #666;
+}
+
+/* --- Modal --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 360px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-actions button[type="submit"] {
+  background: #2c5f8a;
+  color: white;
+}
